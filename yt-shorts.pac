@@ -1,9 +1,6 @@
 function FindProxyForURL(url, host) {
-  // Check if the URL path contains "/shorts/"
   if (url.includes("shorts")) {
-    return "SOCKS5 0.0.0.0:0"; // Redirect to a non-existent proxy to block
+    return "PROXY 0.0.0.0:0";
   }
-
-  // Allow all other traffic to go directly
   return "DIRECT";
 }
